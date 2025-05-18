@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Método da Secante</title>
+</head>
+<body>
+  <h1>Método da Secante</h1>
+  <form id="secant-form" action="/secant/" method="post">
+    <label>Equação (ex: x**3 - 2*x - 5):<br>
+      <input type="text" name="equation" required>
+    </label><br><br>
+    <label>x₀:<br>
+      <input type="number" step="any" name="x0" required>
+    </label><br><br>
+    <label>x₁:<br>
+      <input type="number" step="any" name="x1" required>
+    </label><br><br>
+    <label>Tolerância:<br>
+      <input type="number" step="any" name="tol" value="1e-6">
+    </label><br><br>
+    <label>Máx. Iterações:<br>
+      <input type="number" name="max_iter" value="100">
+    </label><br><br>
+    <button type="submit">Calcular</button>
+  </form>
+
+  <pre id="result"></pre>
+
+  <script>
+    const form = document.getElementById('secant-form');
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const resp = await fetch(form.action, {
+        method: 'POST',
+        body: data
+      });
+      const json = await resp.json();
+      document.getElementById('result').textContent =
+        resp.ok
+          ? `Raiz: ${json.root}\nIterações: ${json.iterations}\nErro: ${json.error}`
+          : `Erro: ${json.error}`;
+    });
+  </script>
+</body>
+</html>
