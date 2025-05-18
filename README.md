@@ -5,7 +5,7 @@
 | Nome Completo     | Matrícula  |
 | ----------------- | ---------- |
 |  Brenda Mendes Araujo  | 202209150008 |
-|    |  |
+|  Breno de Souza Moraes Rego | 202201037725 |
 |  Ian Esteves Amaral Francisco | 202302937314 |
 |  Mateus Padilha Carestiato Daniel| 202308065361  |
 
