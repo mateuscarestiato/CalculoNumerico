@@ -5,8 +5,9 @@
 | Nome Completo     | Matrícula  |
 | ----------------- | ---------- |
 |  Brenda Mendes Araujo  | 202209150008 |
-|  |  |
 |    |  |
+|  Ian Esteves Amaral Francisco | 202302937314 |
+|  Mateus Padilha Carestiato Daniel| 202308065361  |
 
 
 ## 📚 Sobre o Trabalho
